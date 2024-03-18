@@ -24,17 +24,7 @@ Coursera's description of project objectives:
 7. "Challenge: Import the price of Bitcoin using Python in Power Bi & build a line chat  to visualize historical trend"
 
 Python libraries used:
-matplotlib.pyplot as plt
-seaborn as sns
-pandas as pd
-yfinance as yf
+matplotlib.pyplot as plt, seaborn as sns, pandas as pd, yfinance as yf
 
 Python functions used:
-plt.plot
-plt.show
-plt.fill_between
-sns.boxplot
-sns.violinplot
-sns.histoplot
-sns.lineplot
-sns.scatterplot
+plt.plot, plt.show, plt.fill_between, sns.boxplot, sns.violinplot, sns.histoplot, sns.lineplot, sns.scatterplot
