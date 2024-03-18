@@ -34,12 +34,15 @@ plt.plot, plt.show, plt.fill_between, sns.boxplot, sns.violinplot, sns.histoplot
 
 # Python script to import data into Microsoft BI
 import pandas as pd
+
 import yfinance as yf
 
 ticker = "TSLA"
 
 data = yf.download(ticker, start = "2019-01-01", end = "2022-12-31")
+
 data.reset_index(inplace=True)
+
 data
 
 
@@ -50,9 +53,11 @@ data
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Date, Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
 
 plt.plot(dataset['Date'], dataset['Close'], color = 'blue')
@@ -64,9 +69,11 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Date, Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
 
 plt.fill_between(dataset['Date'], dataset['Close'], color = 'skyblue')
@@ -81,13 +88,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.boxplot(data=dataset, y='Close')
+
 plt.show()
 
 ![Page_2_Close_2](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/19bf7f38-782d-41e5-a473-6b5331d02458)
@@ -95,13 +106,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.violinplot(data=dataset, y='Close')
+
 plt.show()
 
 ![Page_2_Volume_Year_Quarter_Etc_1](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/5ea007f5-dbf0-4579-bb5f-d8ced755932c)
@@ -109,13 +124,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.violinplot(data=dataset, y='Volume')
+
 plt.show()
 
 ![Page_2_Volume_Year_Quarter_Etc_2](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/7bbf5173-7251-4aaf-b458-a95f566aac67)
@@ -123,13 +142,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.violinplot(data=dataset, x='Year', y='Volume')
+
 plt.show()
 
 ![Page_2_Volume_Year_Quarter_Etc_3](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/c1bdcdf9-0989-4351-9e61-3e18de46728a)
@@ -137,13 +160,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Close)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.violinplot(data=dataset, x='Year', y='Volume', hue='Quarter')
+
 plt.show()
 
 ![Page_2_Year_Quarter_Etc_1](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/280f2f9f-9073-473a-b704-92e364472dc8)
@@ -151,13 +178,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.histplot(data=dataset, x='Volume', hue='Year', kde=True)
+
 plt.show()
 
 ![Page_2_Date_and_Close_1](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/28ef0a04-35de-4dcb-a6da-f49ccf74b636)
@@ -165,13 +196,17 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 sns.lineplot(data=dataset, x='Date', y='Close', color='Purple')
+
 plt.show()
 
 # Page three visulizations and code
@@ -181,14 +216,19 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Close, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 volume = dataset['Volume']
+
 close = dataset['Close']
+
 date = dataset['Year']
 
 dataset['up_down'] = ['Up' if price > 0 else 'Down' for price in (close-close.shift(1))]
@@ -202,14 +242,19 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Close, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 volume = dataset['Volume']
+
 close = dataset['Close']
+
 date = dataset['Quarter']
 
 dataset['up_down'] = ['Up' if price > 0 else 'Down' for price in (close-close.shift(1))]
@@ -223,14 +268,19 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Close, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 volume = dataset['Volume']
+
 close = dataset['Close']
+
 date = dataset['Month']
 
 dataset['up_down'] = ['Up' if price > 0 else 'Down' for price in (close-close.shift(1))]
@@ -244,14 +294,19 @@ plt.show()
 #The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
 
 #dataset = pandas.DataFrame(Year, Quarter, Month, Day, Close, Volume)
+
 #dataset = dataset.drop_duplicates()
 
 #Paste or type your script code here:
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 
 volume = dataset['Volume']
+
 close = dataset['Close']
+
 date = dataset['Day']
 
 dataset['up_down'] = ['Up' if price > 0 else 'Down' for price in (close-close.shift(1))]
