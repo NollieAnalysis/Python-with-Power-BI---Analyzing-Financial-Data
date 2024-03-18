@@ -54,7 +54,9 @@ data
 
 #Paste or type your script code here:
 import matplotlib.pyplot as plt
+
 plt.plot(dataset['Date'], dataset['Close'], color = 'blue')
+
 plt.show()
 
 ![Page_1_Date_and_Close_2](https://github.com/NollieAnalysis/Python-with-Power-BI-Analyzing-Financial-Data/assets/163913188/28aa51ef-caa4-44bb-85fb-02a5f807d64c)
@@ -66,8 +68,11 @@ plt.show()
 
 #Paste or type your script code here:
 import matplotlib.pyplot as plt
+
 plt.fill_between(dataset['Date'], dataset['Close'], color = 'skyblue')
+
 plt.plot(dataset['Date'], dataset['Close'], color = 'blue')
+
 plt.show()
 
 # Page two visulizations and code
